@@ -1,0 +1,7 @@
+{
+    "users": [
+        {"id": 101, "userName": "Michael", "followers": 250, "profilePicture": "images/profile-pictures/asian-lady.jpg"},
+        {"id": 102, "userName": "Misha", "followers": 350, "profilePicture": "images/profile-pictures/motorcycle-guy.jpg"},
+        {"id": 103, "userName": "Minerva", "followers": 450, "profilePicture": "images/profile-pictures/red-lady.png"}
+    ]
+}

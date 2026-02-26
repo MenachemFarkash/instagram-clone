@@ -90,6 +90,10 @@ body {
     margin-left: auto;
 }
 
+.post-likes-counter {
+    padding-inline: 5px;
+}
+
 .logo-nav-buttons {
     display: flex;
     justify-content: space-between;

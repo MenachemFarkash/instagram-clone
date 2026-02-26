@@ -1,0 +1,15 @@
+{
+    "posts": [
+        {"id": 1, "userId": 101, "likes": 50, "photoLink": "images/posts/post-2.jpg"},
+        {"id": 2, "userId": 101, "likes": 40, "photoLink": "images/posts/leaves.png"},
+        {"id": 3, "userId": 101, "likes": 45, "photoLink": "images/posts/post-3.jpg"},
+        {"id": 4, "userId": 102, "likes": 34, "photoLink": "images/posts/post-4.jpg"},
+        {"id": 5, "userId": 102, "likes": 14, "photoLink": "images/posts/post-5.jpg"},
+        {"id": 6, "userId": 103, "likes": 342, "photoLink": "images/posts/post-6.jpg"},
+        {"id": 7, "userId": 103, "likes": 334, "photoLink": "images/posts/post-7.jpg"},
+        {"id": 8, "userId": 103, "likes": 543, "photoLink": "images/posts/post-8.jpg"},
+        {"id": 9, "userId": 101, "likes": 26, "photoLink": "images/posts/post-9.jpg"},
+        {"id": 10, "userId": 102, "likes": 74, "photoLink": "images/posts/post-10.jpg"},
+        {"id": 11, "userId": 103, "likes": 94, "photoLink": "images/posts/post-11.jpg"}
+    ]
+}
