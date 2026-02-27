@@ -2,11 +2,11 @@
 
 renderPosts(allPosts)
 
-async function renderPosts() {
-    const posts = await loadPosts()
-    const users = await loadUsers()
+function renderPosts() {
+    // const posts = await loadPosts()
+    // const users = await loadUsers()
+    const { users, posts } = getFromLocalStorage()
     let allPostsHTML = ""
-    console.log(users)
     posts.map((post) => {
         const image = post.photoLink
         const profilePicture = findUserById(users, post.userId).profilePicture

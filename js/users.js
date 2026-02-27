@@ -1,3 +1,5 @@
+gConnectedUserId = 1
+
 async function loadUsers() {
     const response = await fetch("Data/users.json")
     const data = await response.json()
