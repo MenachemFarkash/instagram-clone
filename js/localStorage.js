@@ -96,7 +96,6 @@ function uploadPost(photoURL = "") {
     const newPost = {
         id: appData.posts.length + 1,
         userId: gConnectedUserId,
-        likes: 0,
         photoLink: photoURL,
     }
 
@@ -124,4 +123,42 @@ function postComment(postId, content = "") {
     uploadToLocalStorage(appData)
 
     return newComment
+}
+
+function likePost(postId) {
+    const appData = getFromLocalStorage()
+    if (!appData) return
+
+    if (appData.likes.some((like) => postId === like.postId)) {
+        console.log("cannot like a post twice :|")
+        return
+    }
+
+    const newLike = {
+        postId,
+        userId: gConnectedUserId,
+    }
+
+    appData.likes.push(newLike)
+
+    uploadToLocalStorage(appData)
+
+    renderPosts()
+    return newLike
+}
+
+function getPostLikesById(postId) {
+    let likesCount = 0
+    const appData = getFromLocalStorage()
+    if (!appData) return
+
+    appData.likes.forEach((like) => {
+        if (postId === like.postId) likesCount++
+    })
+
+    return likesCount
+}
+
+function checkIfUserLikedPost(data, id) {
+    return data.some((like) => like.userId === gConnectedUserId && like.postId === id)
 }

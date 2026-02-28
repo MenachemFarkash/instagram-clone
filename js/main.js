@@ -1,11 +1,13 @@
 "use strict"
 
-renderPosts(allPosts)
+function onInit() {
+    renderPosts(allPosts)
+}
 
 function renderPosts() {
     // const posts = await loadPosts()
     // const users = await loadUsers()
-    const { users, posts } = getFromLocalStorage()
+    const { users, posts, likes } = getFromLocalStorage()
     let allPostsHTML = ""
     posts.map((post) => {
         const image = post.photoLink
@@ -24,8 +26,8 @@ function renderPosts() {
                     <img src=${image} alt="post image" />
                 </div>
                 <div class="post-actions-bar">
-                    <div class="post-like-button">
-                        <img src="images/icons/like-icon.png" alt="like-icon" />
+                    <div class="post-like-button" onclick="likePost(${post.id})">
+                    ${checkIfUserLikedPost(likes, post.id) ? `<img src="images/icons/user-like-icon.png" alt="like-icon" />` : `<img src="images/icons/like-icon.png" alt="like-icon" />`}    
                     </div>
                     <div class="post-comment-button">
                         <img src="images/icons/comment-icon.png" alt="like-icon" />
@@ -38,7 +40,7 @@ function renderPosts() {
                     </div>
                 </div>
                 <div class="post-likes-counter">
-                    <p>${post.likes} Likes</p>
+                    <p>${getPostLikesById(post.id)} Likes</p>
                 </div>
             </div>
         `
