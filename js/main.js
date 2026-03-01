@@ -12,6 +12,7 @@ function renderPosts() {
     posts.map((post) => {
         const image = post.photoLink
         const profilePicture = findUserById(users, post.userId).profilePicture
+        const userName = findUserById(users, post.userId).userName
         allPostsHTML += `
         <div class="post-container">
                 <div class="profile-more-bar">
@@ -27,11 +28,14 @@ function renderPosts() {
                 </div>
                 <div class="post-actions-bar">
                     <div class="post-like-button" onclick="likePost(${post.id})">
-                    ${checkIfUserLikedPost(likes, post.id) ? `<img src="images/icons/user-like-icon.png" alt="like-icon" />` : `<img src="images/icons/like-icon.png" alt="like-icon" />`}    
+                        ${checkIfUserLikedPost(likes, post.id) ? `<img src="images/icons/user-like-icon.png" alt="like-icon" />` : `<img src="images/icons/like-icon.png" alt="like-icon" />`}    
+                        <p>${getPostLikesById(post.id)}</p>
                     </div>
                     <div class="post-comment-button">
                         <img src="images/icons/comment-icon.png" alt="like-icon" />
+                        <p>0</p>
                     </div>
+
                     <div class="post-share-button">
                         <img src="images/icons/share-icon.png" alt="like-icon" />
                     </div>
@@ -39,8 +43,15 @@ function renderPosts() {
                         <img src="images/icons/save-icon.png" alt="like-icon" />
                     </div>
                 </div>
-                <div class="post-likes-counter">
-                    <p>${getPostLikesById(post.id)} Likes</p>
+                <div class="profile-and-caption">
+                    <p class="caption-content cropped-caption">
+                        <span class="caption-user-name">${userName}</span
+                        ><span>
+                            ${post.caption}</span
+                        >
+                        <button class="caption-show-less-button hidden" onclick="toggleFullCaption()">Less</button>
+                    </p>
+                    <button class="caption-show-more-button" onclick="toggleFullCaption()">More</button>
                 </div>
             </div>
         `

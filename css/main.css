@@ -95,8 +95,62 @@ body {
     margin-left: auto;
 }
 
+.post-like-button,
+.post-comment-button {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.post-like-button img,
+.post-comment-button img {
+    width: 20px;
+    height: 20px;
+}
+
+.post-like-button p,
+.post-comment-button p {
+    display: inline;
+    margin: 0;
+}
+
 .post-likes-counter {
     padding-inline: 5px;
+}
+
+.profile-and-caption {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+    max-width: 98dvw;
+}
+
+.profile-and-caption .caption-user-name {
+    font-weight: bold;
+}
+
+.profile-and-caption .caption-user-name,
+.profile-and-caption p {
+    margin: 0;
+}
+
+.caption-content {
+}
+
+.cropped-caption {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.caption-show-more-button,
+.caption-show-less-button {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 .logo-nav-buttons {
@@ -132,4 +186,8 @@ body {
 .footer img {
     width: 20px;
     height: 20px;
+}
+
+.hidden {
+    display: none;
 }
