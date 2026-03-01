@@ -114,26 +114,11 @@ const gAppData = {
         },
     ],
     likes: [
-        {
-            postId: 1,
-            userId: 1,
-        },
-        {
-            postId: 2,
-            userId: 1,
-        },
-        {
-            postId: 3,
-            userId: 2,
-        },
-        {
-            postId: 3,
-            userId: 1,
-        },
-        {
-            postId: 3,
-            userId: 3,
-        },
+        { postId: 1, userId: 1 },
+        { postId: 2, userId: 1 },
+        { postId: 3, userId: 2 },
+        { postId: 3, userId: 1 },
+        { postId: 3, userId: 3 },
     ],
     comments: [
         { id: 1, userId: 1, postId: 1, content: "Love this picture :)" },

@@ -1,12 +1,11 @@
 "use strict"
 
 function onInit() {
+    uploadToLocalStorage(gAppData)
     renderPosts(allPosts)
 }
 
 function renderPosts() {
-    // const posts = await loadPosts()
-    // const users = await loadUsers()
     const { users, posts, likes } = getFromLocalStorage()
     let allPostsHTML = ""
     posts.map((post) => {
