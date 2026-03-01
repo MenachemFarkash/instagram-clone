@@ -18,6 +18,7 @@ function renderPosts() {
                     <div class="profile-img-container">
                         <img src=${profilePicture} alt="" />
                     </div>
+                    <div class="profile-user-name">${userName}</div>
                     <div class="post-more-actions">
                         <img src="images/icons/more-icon.png" alt="" />
                     </div>

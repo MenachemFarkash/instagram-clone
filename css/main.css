@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(43, 43, 43);
     display: grid;
     grid-auto-rows: auto 1fr auto;
     min-height: 100dvh;
@@ -53,9 +53,19 @@ body {
     width: 100%;
     display: flex;
     align-content: center;
-    justify-content: space-between;
-
+    justify-content: flex-start;
+    gap: 10px;
     padding: 5px;
+}
+
+.profile-more-bar :nth-last-child(1) {
+    margin-left: auto;
+}
+
+.profile-user-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .profile-img-container {
