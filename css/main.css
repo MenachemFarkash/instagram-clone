@@ -8,13 +8,14 @@
 }
 
 body {
-    background-color: rgb(52, 52, 52);
+    background-color: rgb(255, 255, 255);
     display: grid;
     grid-auto-rows: auto 1fr auto;
     min-height: 100dvh;
     max-width: 800px;
     margin: 0;
     margin-inline: auto;
+    color: black;
 }
 
 .navbar {
@@ -42,6 +43,10 @@ body {
     background-color: white;
     height: 40px;
     padding-inline: 20px;
+}
+
+.post-container {
+    margin-bottom: 2rem;
 }
 
 .profile-more-bar {
@@ -134,9 +139,6 @@ body {
 .profile-and-caption .caption-user-name,
 .profile-and-caption p {
     margin: 0;
-}
-
-.caption-content {
 }
 
 .cropped-caption {
