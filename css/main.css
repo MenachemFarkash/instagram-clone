@@ -135,7 +135,6 @@ body {
 }
 
 .profile-and-caption {
-    display: flex;
     gap: 0.5rem;
     margin-top: 0.5rem;
     padding-left: 0.5rem;
@@ -144,17 +143,17 @@ body {
 
 .profile-and-caption .caption-user-name {
     font-weight: bold;
+    display: inline;
 }
 
-.profile-and-caption .caption-user-name,
-.profile-and-caption p {
-    margin: 0;
+.caption-user-name {
+    margin-right: 0.5rem;
 }
-
 .cropped-caption {
-    white-space: nowrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .caption-show-more-button,

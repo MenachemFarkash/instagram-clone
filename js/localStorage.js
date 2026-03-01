@@ -20,7 +20,8 @@ const gAppData = {
             userId: 1,
             likes: 50,
             photoLink: "images/posts/post-2.jpg",
-            caption: "this is some random caption but a bit longer than the others",
+            caption:
+                "this is some random caption but a bit longer than the others, and this might be cut by the css i wrote if this is working as intended :) i really want this to pass the 3 lines margin so i can see if its working, and this is still not long enough, so im adding a",
         },
         {
             id: 2,

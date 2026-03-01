@@ -44,14 +44,10 @@ function renderPosts() {
                     </div>
                 </div>
                 <div class="profile-and-caption">
-                    <p class="caption-content caption-${post.id} cropped-caption">
-                        <span class="caption-user-name">${userName}</span
-                        ><span>
-                            ${post.caption}</span
-                        >
-                        <button class="caption-show-less-button less-${post.id} hidden" onclick="toggleFullCaption(${post.id})">Less</button>
-                    </p>
-                    <button class="caption-show-more-button  more-${post.id}" onclick="toggleFullCaption(${post.id})">More</button>
+                        <span class="caption-content caption-${post.id} cropped-caption">
+                            <span class="caption-user-name">${userName}</span>${post.caption}</span>
+                        <span class="caption-show-less-button less-${post.id} hidden" onclick="toggleFullCaption(${post.id})">Less</span>
+                        <span class="caption-show-more-button more-${post.id}" onclick="toggleFullCaption(${post.id})">More</span>
                 </div>
             </div>
         `
